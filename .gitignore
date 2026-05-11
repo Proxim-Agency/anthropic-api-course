@@ -26,3 +26,12 @@ Temporary Items
 
 # Credentials
 creds/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+.python-version
