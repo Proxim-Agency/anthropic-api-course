@@ -26,6 +26,7 @@ Temporary Items
 
 # Credentials
 creds/
+.env
 
 # Python
 __pycache__/
