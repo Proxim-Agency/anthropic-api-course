@@ -1,17 +1,50 @@
 [
   {
-    "task": "Parse an AWS CloudFormation template and extract all resource logical IDs",
-    "format": "python",
-    "solution_criteria": "Function should take a CloudFormation JSON/YAML template as input and return a list of all logical resource IDs. Should handle both JSON and YAML formats."
+    "prompt_inputs": {
+      "height": "178 cm",
+      "weight": "70 kg",
+      "goal": "Marathon training day with 4000+ calorie intake and carbohydrate loading for endurance",
+      "restrictions": "None"
+    },
+    "solution_criteria": [
+      "Meal plan totals 4000+ calories across all meals and snacks",
+      "Carbohydrates comprise 60-65% of total calories with strategic timing around training",
+      "Includes hydration recommendations at key intervals throughout the day",
+      "Plan is presented in compact, single-day format with clear meal timing"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a high-endurance athlete (marathon runner) requiring 4000+ calories with emphasis on carbohydrate loading and hydration timing throughout the day"
   },
   {
-    "task": "Create an AWS IAM policy JSON that allows read-only access to all S3 buckets",
-    "format": "json",
-    "solution_criteria": "Valid IAM policy document with appropriate S3 read-only actions (s3:GetObject, s3:ListBucket) for all resources. Must follow AWS policy syntax."
+    "prompt_inputs": {
+      "height": "180 cm",
+      "weight": "85 kg",
+      "goal": "Maximize strength and muscle gain for weightlifting competition in 8 weeks",
+      "restrictions": "Lactose intolerant"
+    },
+    "solution_criteria": [
+      "Meal plan includes 4-5 meals with protein distributed evenly (minimum 30g per meal)",
+      "Pre-workout and post-workout nutrition strategically timed around training session",
+      "All meals are lactose-free and practical to prepare",
+      "Total daily calories and macros support strength/muscle gain goals for 85kg athlete"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a strength/power athlete (weightlifter) needing precise protein distribution across meals and strategic pre/post-workout nutrition around training sessions"
   },
   {
-    "task": "Write a regex pattern to validate AWS ARN (Amazon Resource Name) format",
-    "format": "regex",
-    "solution_criteria": "Pattern should match valid ARNs (e.g., arn:aws:s3:::bucket-name) and reject invalid formats. Should handle common AWS services like EC2, S3, IAM, and RDS."
+    "prompt_inputs": {
+      "height": "160 cm",
+      "weight": "50 kg",
+      "goal": "Maintain current weight while optimizing performance and recovery for competitive gymnastics",
+      "restrictions": "Vegetarian, no nuts"
+    },
+    "solution_criteria": [
+      "Meal plan totals 1,800-2,000 calories distributed across 4-5 meals",
+      "Includes minimum 90g protein from vegetarian sources to support muscle recovery",
+      "Contains iron-rich and calcium-rich foods to address vegetarian micronutrient needs",
+      "All meals are nut-free and practical to consume on a competition day"
+    ],
+    "task_description": "Write a compact, concise 1 day meal plan for a single athlete",
+    "scenario": "Testing with a sport requiring weight management (jockey or gymnast) where the meal plan must be calorie-controlled while maintaining performance nutrition and micronutrient density"
   }
 ]

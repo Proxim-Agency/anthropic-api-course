@@ -1,0 +1,274 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Prompt Evaluation Report</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                margin: 0;
+                padding: 20px;
+                color: #333;
+            }
+            .header {
+                background-color: #f0f0f0;
+                padding: 20px;
+                border-radius: 5px;
+                margin-bottom: 20px;
+            }
+            .summary-stats {
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            .stat-box {
+                background-color: #fff;
+                border-radius: 5px;
+                padding: 15px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                flex-basis: 30%;
+                min-width: 200px;
+            }
+            .stat-value {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 5px;
+            }
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-top: 20px;
+            }
+            th {
+                background-color: #4a4a4a;
+                color: white;
+                text-align: left;
+                padding: 12px;
+            }
+            td {
+                padding: 10px;
+                border-bottom: 1px solid #ddd;
+                vertical-align: top;
+            }
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+            .output-cell {
+                white-space: pre-wrap;
+            }
+            .score {
+                font-weight: bold;
+                padding: 5px 10px;
+                border-radius: 3px;
+                display: inline-block;
+            }
+            .score-high {
+                background-color: #c8e6c9;
+                color: #2e7d32;
+            }
+            .score-medium {
+                background-color: #fff9c4;
+                color: #f57f17;
+            }
+            .score-low {
+                background-color: #ffcdd2;
+                color: #c62828;
+            }
+            .output {
+                overflow: auto;
+                white-space: pre-wrap;
+            }
+
+            .output pre {
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 4px;
+                padding: 10px;
+                margin: 0;
+                font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+                font-size: 14px;
+                line-height: 1.4;
+                color: #333;
+                box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+                overflow-x: auto;
+                white-space: pre-wrap; 
+                word-wrap: break-word; 
+            }
+
+            td {
+                width: 20%;
+            }
+            .score-col {
+                width: 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Prompt Evaluation Report</h1>
+            <div class="summary-stats">
+                <div class="stat-box">
+                    <div>Total Test Cases</div>
+                    <div class="stat-value">3</div>
+                </div>
+                <div class="stat-box">
+                    <div>Average Score</div>
+                    <div class="stat-value">7.0 / 10</div>
+                </div>
+                <div class="stat-box">
+                    <div>Pass Rate (≥7)</div>
+                    <div class="stat-value">33.3%</div>
+                </div>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Scenario</th>
+                    <th>Prompt Inputs</th>
+                    <th>Solution Criteria</th>
+                    <th>Output</th>
+                    <th>Score</th>
+                    <th>Reasoning</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            <tr>
+                <td>Testing with a high-endurance athlete (marathon runner) requiring 4000+ calories with emphasis on carbohydrate loading and hydration timing throughout the day</td>
+                <td class="prompt-inputs"><strong>height:</strong> 178 cm<br><strong>weight:</strong> 70 kg<br><strong>goal:</strong> Marathon training day with 4000+ calorie intake and carbohydrate loading for endurance<br><strong>restrictions:</strong> None</td>
+                <td class="criteria">• Meal plan totals 4000+ calories across all meals and snacks<br>• Carbohydrates comprise 60-65% of total calories with strategic timing around training<br>• Includes hydration recommendations at key intervals throughout the day<br>• Plan is presented in compact, single-day format with clear meal timing</td>
+                <td class="output"><pre># One-Day Meal Plan for Marathon Training
+
+Here is a one-day meal plan for an athlete preparing for marathon training with carbohydrate loading:
+
+* **Calorie Target:** Approximately 4000 calories
+* **Macronutrient Breakdown:** Protein (140g), Fat (110g), Carbs (550g)
+
+**Meal Plan:**
+
+* **Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), honey (30g), and whole milk (240ml). Side of whole wheat toast (60g) with almond butter (20g).
+  * Protein: 18g, Fat: 12g, Carbs: 95g
+
+* **Mid-Morning Snack (10:00 AM):** Energy bar (65g) and sports drink (500ml).
+  * Protein: 10g, Fat: 8g, Carbs: 85g
+
+* **Lunch (1:00 PM):** Whole wheat pasta (120g dry weight) with lean ground turkey (130g), tomato sauce (150g), and olive oil (15ml). Side salad with mixed greens (100g) and balsamic vinaigrette (20ml).
+  * Protein: 42g, Fat: 15g, Carbs: 95g
+
+* **Afternoon Snack (3:30 PM):** White rice cakes (50g) with peanut butter (25g) and honey (20g). Orange juice (300ml).
+  * Protein: 12g, Fat: 10g, Carbs: 90g
+
+* **Pre-Dinner Snack (5:00 PM):** Dates (80g) and pretzels (40g).
+  * Protein: 5g, Fat: 2g, Carbs: 75g
+
+* **Dinner (7:00 PM):** Grilled chicken breast (150g) with sweet potato (200g) and steamed green beans (150g). Brown rice (90g dry weight).
+  * Protein: 45g, Fat: 8g, Carbs: 95g
+
+* **Evening Snack (9:30 PM):** Greek yogurt (200g) with granola (40g) and berries (80g).
+  * Protein: 15g, Fat: 8g, Carbs: 55g
+
+**Hydration Plan:**
+- Water: 3-4 liters throughout the day
+- Sports drink with electrolytes: 1000ml during/around training
+- Coconut water: 500ml as additional electrolyte source
+
+This carbohydrate-rich meal plan supports sustained energy for endurance training while providing adequate protein for muscle recovery and repair.</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements by providing a daily caloric total (4,147 calories), complete macronutrient breakdown, and detailed meals with exact portions and timing. However, it has a significant deficiency in the secondary criteria: the carbohydrate percentage (55.1%) falls short of the required 60-65% range. Additionally, while hydration is well-addressed, the plan lacks strategic timing alignment with the actual training session, which is essential for effective carbohydrate loading. The solution is functional and well-presented but fails to fully optimize the macronutrient distribution for the stated goal.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a strength/power athlete (weightlifter) needing precise protein distribution across meals and strategic pre/post-workout nutrition around training sessions</td>
+                <td class="prompt-inputs"><strong>height:</strong> 180 cm<br><strong>weight:</strong> 85 kg<br><strong>goal:</strong> Maximize strength and muscle gain for weightlifting competition in 8 weeks<br><strong>restrictions:</strong> Lactose intolerant</td>
+                <td class="criteria">• Meal plan includes 4-5 meals with protein distributed evenly (minimum 30g per meal)<br>• Pre-workout and post-workout nutrition strategically timed around training session<br>• All meals are lactose-free and practical to prepare<br>• Total daily calories and macros support strength/muscle gain goals for 85kg athlete</td>
+                <td class="output"><pre># One-Day Meal Plan for Strength & Muscle Gain (Lactose-Free)
+
+**Calorie Target:** Approximately 3,200 calories
+
+**Macronutrient Breakdown:** Protein (200g), Fat (107g), Carbs (400g)
+
+---
+
+## Meal Plan:
+
+**Breakfast (7:00 AM):** Oatmeal (100g dry weight) with banana (150g), almond butter (30g), and honey (15g). Orange juice (240ml).
+- Protein: 18g, Fat: 18g, Carbs: 85g
+
+**Mid-Morning Snack (10:00 AM):** Rice cakes (40g) with peanut butter (25g) and sliced apple (120g).
+- Protein: 10g, Fat: 12g, Carbs: 45g
+
+**Lunch (1:00 PM):** Grilled chicken breast (180g) with white rice (150g cooked weight), steamed broccoli (200g), and olive oil drizzle (10ml).
+- Protein: 50g, Fat: 15g, Carbs: 70g
+
+**Pre-Workout Snack (3:30 PM):** Bagel (70g) with jam (20g) and turkey slices (50g).
+- Protein: 15g, Fat: 3g, Carbs: 50g
+
+**Dinner (7:00 PM):** Baked salmon (160g) with sweet potato (250g), asparagus (150g), and coconut oil (10ml).
+- Protein: 42g, Fat: 18g, Carbs: 75g
+
+**Evening Snack (9:30 PM):** Almond butter (25g) with rice cakes (30g) and a pear (150g).
+- Protein: 9g, Fat: 18g, Carbs: 40g
+
+**Post-Workout Recovery Drink (within 30 mins of training):** Whey protein powder isolate (35g) with rice milk (250ml) and dates (40g).
+- Protein: 30g, Fat: 1g, Carbs: 35g
+
+---
+
+**Daily Totals:** 3,200 calories | Protein: 174g | Fat: 85g | Carbs: 400g
+
+**Hydration:** 3-4 liters of water daily, plus electrolyte drink during intense training sessions.
+
+This plan emphasizes lean proteins, complex carbohydrates for sustained energy, and healthy fats while avoiding all dairy products to accommodate lactose intolerance. The macronutrient ratio supports muscle hypertrophy and strength gains for your weightlifting competition.</pre></td>
+                <td class="score-col"><span class="score score-medium">6</span></td>
+                <td class="reasoning">The solution meets all three mandatory requirements with clear daily totals, complete macro breakdowns, and specific meals with portions and timing. However, it fails a key secondary criterion: protein distribution is not evenly distributed with minimum 30g per meal. Multiple meals contain significantly less than 30g (breakfast 18g, mid-morning 10g, pre-workout 15g, evening 9g). Additionally, the plan includes 7 eating occasions rather than the 4-5 meals requested, and there's a discrepancy between the stated 200g protein target and the actual 174g total. The pre/post-workout timing is well-executed, and all foods are appropriately lactose-free.</td>
+            </tr>
+        
+            <tr>
+                <td>Testing with a sport requiring weight management (jockey or gymnast) where the meal plan must be calorie-controlled while maintaining performance nutrition and micronutrient density</td>
+                <td class="prompt-inputs"><strong>height:</strong> 160 cm<br><strong>weight:</strong> 50 kg<br><strong>goal:</strong> Maintain current weight while optimizing performance and recovery for competitive gymnastics<br><strong>restrictions:</strong> Vegetarian, no nuts</td>
+                <td class="criteria">• Meal plan totals 1,800-2,000 calories distributed across 4-5 meals<br>• Includes minimum 90g protein from vegetarian sources to support muscle recovery<br>• Contains iron-rich and calcium-rich foods to address vegetarian micronutrient needs<br>• All meals are nut-free and practical to consume on a competition day</td>
+                <td class="output"><pre># One-Day Meal Plan for Competitive Gymnast
+
+Here is a one-day meal plan for a vegetarian gymnast aiming to maintain weight while optimizing performance and recovery:
+
+* **Calorie Target:** Approximately 2,000 calories
+* **Macronutrient Breakdown:** Protein (100g), Fat (55g), Carbs (280g)
+
+## Meal Plan:
+
+* **Breakfast (7:00 AM):** Oatmeal (70g dry weight) with berries (120g), ground flaxseed (15g), and honey (20g). Low-fat milk (240ml).
+    * Protein: 12g, Fat: 8g, Carbs: 65g
+
+* **Mid-Morning Snack (10:00 AM):** Greek yogurt (150g, non-fat) with granola (30g) and sliced banana (80g).
+    * Protein: 18g, Fat: 3g, Carbs: 40g
+
+* **Lunch (1:00 PM):** Chickpea and vegetable wrap: whole wheat tortilla (50g), hummus (40g), chickpeas (100g cooked), mixed greens (80g), cucumber (60g), bell pepper (50g), and tomato (50g). Side of carrot sticks (100g).
+    * Protein: 12g, Fat: 8g, Carbs: 65g
+
+* **Afternoon Snack (3:30 PM):** Whole grain bread (40g) with almond butter substitute - sunflower seed butter (30g) and sliced apple (120g). Water (500ml).
+    * Protein: 10g, Fat: 10g, Carbs: 45g
+
+* **Dinner (6:30 PM):** Baked tofu (150g) with stir-fried vegetables (broccoli 100g, snap peas 80g, mushrooms 60g) in olive oil (10ml), served with brown rice (75g cooked weight).
+    * Protein: 28g, Fat: 12g, Carbs: 50g
+
+* **Evening Snack (8:30 PM):** Low-fat cottage cheese (120g) with berries (80g) and seeds (pumpkin seeds 15g).
+    * Protein: 20g, Fat: 6g, Carbs: 15g
+
+**Hydration:** Aim for 2-3 liters of water throughout the day, with electrolyte beverage (500ml) during/after training sessions.
+
+This meal plan prioritizes plant-based protein sources, complex carbohydrates for energy during gymnastics training, and adequate recovery nutrients while maintaining the athlete's current weight and avoiding all nuts.</pre></td>
+                <td class="score-col"><span class="score score-high">9</span></td>
+                <td class="reasoning">The solution comprehensively meets all mandatory requirements with precise daily caloric total, detailed macronutrient breakdown, and six meals with exact portions and timing. It successfully addresses all secondary criteria: protein exceeds 90g minimum from vegetarian sources, includes multiple iron and calcium-rich foods appropriate for vegetarian athletes, and all meals are nut-free and practical for competition day. The meal plan is well-structured, nutritionally balanced for a 50kg gymnast, and appropriately timed around training. Minor issues include slight calorie calculation variance and unnecessary clarification about nut substitutes, but these do not impact the core quality or usability of the plan.</td>
+            </tr>
+        
+            </tbody>
+        </table>
+    </body>
+    </html>
+    
